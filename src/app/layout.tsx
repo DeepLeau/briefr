@@ -1,11 +1,7 @@
 import type { Metadata } from 'next'
-import { Geist } from 'next/font/google'
+import { GeistSans } from "geist/font/sans";
 import './globals.css'
 
-const geist = Geist({
-  subsets: ['latin'],
-  variable: '--font-geist-sans',
-})
 
 export const metadata: Metadata = {
   title: 'Briefr — AI Copilot for Remote Teams',
@@ -19,7 +15,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${geist.variable} font-sans`}>{children}</body>
+      <body className={`${GeistSans.variable} font-sans`}>{children}</body>
     </html>
   )
 }
+
